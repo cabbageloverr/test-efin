@@ -9,7 +9,7 @@
       </div>
     </nav>
 
-    <div class="h-100 body p-3 grid grid-cols-4 grid-rows-4 gap-4 text-white text-center">
+    <div class="body h-100 p-2 grid grid-cols-4 grid-rows-4 gap-4 text-white text-center">
       <div class="bg-red-800 row-span-2 col-span-2">{{ data?.data_1 }} </div>
       <div class="bg-green-800 row-span-2 col-span-1">{{ data?.data_2 }}</div>
       <div class="bg-purple-800 row-span-4 col-span-1">{{ data?.data_3 }}</div>
@@ -22,6 +22,7 @@
 <script setup lang="ts">
 import {  ref } from 'vue';
 import getData, { type GetData } from './API/getData'
+import './assets/main.css'
 
 const data = ref<GetData>()
 
@@ -37,4 +38,8 @@ getList()
 </script>
 
 
-<style scoped></style>
+<style scoped>
+.body{
+  height: 100%;
+}
+</style>
